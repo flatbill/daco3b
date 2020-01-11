@@ -1,0 +1,64 @@
+<!-- ss daco/src/styles.scss and contentChoices.component.ts  -->
+
+
+<!-- <button (click)="child.callMethod()" >Call Child Component Method</button>
+<child #child></child> -->
+<!-- <button (click)="DacoFetchComponent.callMethod()" >Call daco-fetch Component Method</button>
+<app-daco-fetch #DacoFetchComponent></app-daco-fetch> -->
+<!-- <button (click)="DacoFetchComponent.launchDacoFetch()" >Call launchDacoFetch </button> -->
+<button (click)="DacoFetchComponent.getDacoData()" >Call getDacoData </button>
+<button (click)="ContentChoicesComponent.releaseTheKraken()" >Call releaseTheKraken </button>
+
+<app-daco-fetch 
+  #DacoFetchComponent
+  [count]     = 'myCount'    
+  [dcFormatArray1]="myDcFormatArray1" 
+  (binder1)="parentFun1($event)"
+  (binder2)="parentFun2($event)"
+  (binder3)="parentFun3($event)"
+  (binder4)="parentFun4($event)"
+  (binder5)="parentFun5($event)"
+  (binder6)="parentFun6($event)"
+
+>
+</app-daco-fetch>
+
+<cc-selector1
+   #ContentChoicesComponent
+   [receivedDcFormatArray0]="globalDcFormatArray0"
+   [receivedDcContentChoiceArray0]="globalDcContentArray0"
+   [receivedDcSkuFormatArray0]="globalDcSkuFormatArray0"
+   [receivedDcFormatDetailArray0]="globalDcFormatDetailArray0"
+   [receivedFetchDone]="globalFetchDone"
+>
+</cc-selector1>    
+
+<!-- temp Jan 2020 -->
+<!-- <div class="dacoSpaHeader">
+</div> -->
+<div class="flexboxCcPgDf">
+    <div class=ccDiv>ccDivvyWords</div>
+    <div class=pgDiv>pgDivvyWords</div>
+    <div class=dfDiv>
+      <!-- <app-daco-fetch   
+        [count]     = 'myCount'    
+        [dcFormatArray1]="myDcFormatArray1" 
+        (binder1)="parentFun1($event)"
+        (binder2)="parentFun2($event)"
+      > 
+    </app-daco-fetch> -->
+        <!-- <app-catalog-list-set 
+          [dcFormatArray1]="myDcFormatArray1" 
+          [receivedMyFriend] = "myFriend"
+        >
+        </app-catalog-list-set> -->
+        <!-- count from app.component.html is {{myCount}} <br>
+        globalDcFormatArray0 from app.component.html is  <br> -->
+        <!-- <div *ngFor="let df of globalDcFormatArray0; let dfi = index">
+            <span class='n1 font4'>{{df.dfFormatKey}} </span>
+            <span class='n2 font4'>{{df.dfFormatName}} </span>
+            <span class='n3 font4'>{{df.dfUsageCount}} </span>
+        </div> -->
+        
+    </div>
+</div>

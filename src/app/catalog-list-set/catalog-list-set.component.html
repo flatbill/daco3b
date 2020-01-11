@@ -1,0 +1,145 @@
+<!-- <p>hello from catalog-list-set.html</p> -->
+<!-- jan 2020  failed experiment, too complicated to break main screen into components. -->
+<!-- <div class="dfDiv" >
+    <div class=ccPgDfHeadingBox>
+        <span class=font2>&nbsp;Format Catalog</span> 
+        <span class='msg'> &nbsp; {{dfHelpMsg}} &nbsp; </span>
+    </div>   
+    <div class='dfScSfBox' (click)="accTog2('df')"  >
+      <span class="plusMinus"  *ngIf='!dfListOn'>+</span> 
+      <span class="plusMinus"  *ngIf='dfListOn'>-</span> 
+      <span class='font1 '> Format List  </span>         
+      <span class='dfScSfCount '> {{dfCount}}  </span>      
+    </div> --> <!-- end dfScbox for df -->
+    
+    <!-- <div *ngIf='dfListOn'  >--> <!-- start df list -->
+     <!--  <span class='cgDfList' >
+        <span class='n1 font3'>  Fmt </span>
+        <span class='n2 font3'> Description </span>
+        <span class='n3 font3'> Cnt </span>
+      </span>
+      <span tabindex="-1" *ngFor="let df of dcFormatArray1; let dfi = index" 
+            class='cgDfList dfClickable dfHoverable'            
+            (click)='dfRefocus(dfi, "ok")'
+            (keydown.arrowup)='dfRefocus(dfi, "up")' 
+            (keydown.arrowdown)='dfRefocus(dfi,"dn")' 
+            > -->
+        <!-- <input class='n1' type="text" size='10' (focus)='kooboo()'> -->
+      <!--   <span class='n1 font4'> {{df.dfFormatKey}} </span>
+        <span class='n2 font4'> {{df.dfFormatName}} </span>
+        <span class='n3 font4'> {{df.dfUsageCount}} </span>
+      </span>
+    </div> -->  <!-- end list df  -->
+
+    <!--  <div class='dfScSfBox' (click)="accTog2('sc')"  >
+        <span class="plusMinus"  *ngIf='!scListOn'>+</span> 
+        <span class="plusMinus"  *ngIf='scListOn'>-</span> 
+        <span class='font1 '> Items  </span>         
+        <span class='dfScSfCount '> {{suCount}}  </span>      
+     </div> --> <!-- end dfScbox for sc -->
+      
+     <!-- <div [hidden]="!scListOn" > ngIf vs hidden. hidden is slightly faster -->
+    <!--  <div *ngIf='scListOn' > --> <!-- start sc list -->
+        <!-- <span class='cgScList'>
+          <span class='s1 font3'>  Item </span>
+          <span class='s2 font3'> Formats </span>
+        </span>
+        <span *ngFor="let su of suFreqArray0" 
+              class='cgScList'
+              >
+          <span class='s1 font4'> {{su.sku}} </span>
+          <span class='s2 font4'> {{su.skuUsageFormats}} </span>
+        </span>
+      </div> --> --> <!-- end list sc  -->
+
+<!--       <div class='dfScSfBox' (click)="accTog2('sf')"  >
+          <span class="plusMinus"  *ngIf='!sfListOn'>+</span> 
+          <span class="plusMinus"  *ngIf='sfListOn'>-</span> 
+          <span class='font1 '> Items Layers Formats  </span>         
+          <span class='dfScSfCount '> {{sfCount}}  </span>      
+       </div> --> <!-- end dfScSfBox for sf -->
+  
+      <!-- <div *ngIf='sfListOn' > -->  <!-- start sf list -->
+        <!-- <span class='cgSfList'>
+          <span class='r1 font3'>  Item  </span>
+          <span class='r2 font3'> Layer </span>
+          <span class='r3 font3'> Format </span>
+        </span>
+        <span *ngFor="let sf of skuFormatArray1" 
+              class='cgSfList'
+              >
+          <span class='r1 font4'> {{sf.sfSku}}   </span>
+          <span class='r2 font4'> {{sf.sfLayer}} </span>
+          <span class='r3 font4'> {{sf.sfFormatKey}} </span>
+        </span> -->
+      <!-- </div> --> <!-- end sf list  -->
+
+<!-- fd start -->
+<!-- <div class='dfScSfBox' (click)="accTog2('fd')"  >
+    <span class="plusMinus"  *ngIf='!fdListOn'>+</span> 
+    <span class="plusMinus"  *ngIf='fdListOn'>-</span> 
+    <span class='font1 '> Format Detail </span>         
+    <span class='dfScSfCount '> {{fdCount}}  </span>      
+ </div> --> <!-- end dfScSfBox for fd -->
+
+<!-- <div *ngIf='fdListOn' > -->  <!-- start fd list -->
+  <!-- <span class='cgFdList'>
+    <span class='q1 font3'> Fmt </span>
+    <span class='q2 font3'> Ln </span>
+    <span class='q3 font3'> Sl </span>
+    <span class='q4 font3'> Content </span>
+    <span class='q5 font3'>Text or Mask </span>
+  </span>
+  <span *ngFor="let fd of formatDetailArray1" 
+        class='cgFdList'
+        >       
+    <span class='q1 font4'> {{fd.fdFormatKey}} </span>
+    <span class='q2 font4'>  {{fd.fdRow}} </span>
+    <span class='q3 font4'> {{fd.fdRowSlot}} </span>
+    <span class='q4 font4'> {{fd.fdContentName}}  </span>
+    <span class='q5 font4'> {{fd.fdMask}} </span>
+  </span>
+</div> --> <!-- end fd list  -->
+
+<!-- fl start -->
+<!-- <div class='dfScSfBox' (click)="accTog2('fl')"  >
+    <span class="plusMinus"  *ngIf='!flListOn'>+</span> 
+    <span class="plusMinus"  *ngIf='flListOn'>-</span> 
+    <span class='font1 '> Text </span>         
+    <span class='dfScSfCount '> {{flCount}}  </span>      
+ </div> --> <!-- end dfScSfBox for fl -->
+
+<!-- <div *ngIf='flListOn' >  --> <!-- start fl list -->
+  <!-- <span class='cgFlList'>
+    <span class='f1 font3'> Literal </span>
+  </span>
+  <span *ngFor="let fl of formatLiteralArray1" 
+        class='cgFlList'
+        >       
+    <span class='f1 font4'>  {{fl.flText}} </span>
+  </span>
+</div> --> <!-- end fl list  -->
+
+
+
+<!-- fm start -->
+<!-- <div class='dfScSfBox' (click)="accTog2('fm')"  >
+    <span class="plusMinus"  *ngIf='!fmListOn'>+</span> 
+    <span class="plusMinus"  *ngIf='fmListOn'>-</span> 
+    <span class='font1 '> Mask </span>         
+    <span class='dfScSfCount '> {{fmCount}}  </span>      
+ </div> --> <!-- end dfScSfBox for fm -->
+
+<!-- <div *ngIf='fmListOn' > -->  <!-- start fm list -->
+  <!-- <span class='cgFmList'>
+    <span class='j1 font3'> Mask </span>
+    <span class='j2 font3'> Type </span>
+  </span>
+  <span *ngFor="let fm of formatMaskArray1" 
+        class='cgFmList'
+        >       
+    <span class='j1 font4'> {{fm.fmMask}}      </span>
+    <span class='j2 font4'> {{fm.fmMaskType}}  </span>
+  </span>
+</div> --> <!-- end fm list  -->
+<!-- </div> --> <!-- end dfDiv -->  
